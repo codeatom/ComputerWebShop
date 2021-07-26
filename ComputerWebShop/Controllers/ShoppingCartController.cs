@@ -6,19 +6,19 @@ using Microsoft.AspNetCore.Mvc;
 using ComputerWebShop.Models.Repo;
 using ComputerWebShop.Models.Service;
 using ComputerWebShop.Models.ViewModel;
-
+using ComputerWebShop.Models.Data;
 
 namespace ComputerWebShop.Controllers
 {
     public class ShoppingCartController : Controller
     {
-        private readonly IComputerRepo _computerRepo;
+        private readonly IComputerService _computerService;
         private readonly IShoppingCartService _shoppingCartService;
 
 
-        public ShoppingCartController(IComputerRepo computerRepo, IShoppingCartService shoppingCartService)
+        public ShoppingCartController(IComputerService computerService, IShoppingCartService shoppingCartService)
         {
-            _computerRepo = computerRepo;
+            _computerService = computerService;
             _shoppingCartService = shoppingCartService;
         }
 
@@ -34,9 +34,9 @@ namespace ComputerWebShop.Controllers
 
         public IActionResult AddToShoppingCart(int computerId)
         {
-            var selectedComputer = _computerRepo.Read().FirstOrDefault(c => c.Id == computerId);
+            Computer selectedComputer = _computerService.FindById(computerId);
 
-            if(selectedComputer != null)
+            if (selectedComputer != null)
             {
                 _shoppingCartService.AddToCart(selectedComputer, 1);
             }
@@ -46,7 +46,7 @@ namespace ComputerWebShop.Controllers
 
         public IActionResult RemoveFromShoppingCart(int computerId)
         {
-            var selectedComputer = _computerRepo.Read().FirstOrDefault(c => c.Id == computerId);
+            Computer selectedComputer = _computerService.FindById(computerId);
 
             if (selectedComputer != null)
             {
