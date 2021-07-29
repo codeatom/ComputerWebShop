@@ -40,7 +40,11 @@
             }
         }
     </select><br><br>
-    <span asp-validation-for="CategoryId"></span><br /><br />
+    <span asp-validation-for="CategoryId"></span>
+
+    <label asp-for="ComputerSpecs" style="margin-left: 0px">ComputerSpecs</label>
+    <textarea asp-for="ComputerSpecs"></textarea>
+    <span asp-validation-for="Description"></span><br /><br />
 
     <label asp-for="IsInStock" style="margin-left: 15px">IsInStock</label>
     <input asp-for="IsInStock" />

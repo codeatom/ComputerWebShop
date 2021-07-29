@@ -31,6 +31,7 @@ namespace ComputerWebShop.Models.Service
 
             computer.Name = createComputer.Name;
             computer.Description = createComputer.Description;
+            computer.ComputerSpecs = createComputer.ComputerSpecs;
             computer.Price = createComputer.Price;
             computer.ImageUrl = createComputer.ImageUrl;
             computer.ImageThumbnailUrl = createComputer.ImageThumbnailUrl;
@@ -70,6 +71,7 @@ namespace ComputerWebShop.Models.Service
 
             originalComputer.Name = createComputer.Name;
             originalComputer.Description = createComputer.Description;
+            originalComputer.ComputerSpecs = createComputer.ComputerSpecs;
             originalComputer.Price = createComputer.Price;
             originalComputer.ImageUrl = createComputer.ImageUrl;
             originalComputer.ImageThumbnailUrl = createComputer.ImageThumbnailUrl;
@@ -96,6 +98,7 @@ namespace ComputerWebShop.Models.Service
 
             createComputer.Name = computer.Name;
             createComputer.Description = computer.Description;
+            createComputer.ComputerSpecs = computer.ComputerSpecs;
             createComputer.Price = computer.Price;
             createComputer.ImageUrl = computer.ImageUrl;
             createComputer.ImageThumbnailUrl = computer.ImageThumbnailUrl;

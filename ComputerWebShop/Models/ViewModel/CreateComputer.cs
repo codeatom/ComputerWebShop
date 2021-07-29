@@ -16,6 +16,9 @@ namespace ComputerWebShop.Models.ViewModel
         public string Description { get; set; }
 
         [Required]
+        public string ComputerSpecs { get; set; }
+
+        [Required]
         public decimal Price { get; set; }
 
         [Required]

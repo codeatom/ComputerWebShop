@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.ModelBinding;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -44,6 +45,7 @@ namespace ComputerWebShop.Models.Data
         [DataType(DataType.PhoneNumber)]
         public string PhoneNumber { get; set; }
 
+        [Column(TypeName = "decimal(18,2)")]
         public decimal OrderTotal { get; set; }
 
         public DateTime OrderPlaced { get; set; }

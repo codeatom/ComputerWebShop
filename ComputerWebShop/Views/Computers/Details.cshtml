@@ -8,9 +8,11 @@
 <div class="thumbnail">
     <img alt="@Model.Computer.Name" src="@Model.Computer.ImageUrl" />
     <div class="caption-full">
-        <h3 class="pull-right">@Model.Computer.Price</h3>
+        <h3 class="pull-right">@Model.Computer.Price.ToString("c")</h3>
         <h3><a href="#">@Model.Computer.Name</a></h3>
         <p>@Model.Computer.Description</p>
+        <br />
+        <p>@Model.Computer.ComputerSpecs</p>
     </div>
     <div>
         <p class="btn">

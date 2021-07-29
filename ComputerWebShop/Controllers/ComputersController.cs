@@ -130,7 +130,7 @@ namespace ComputerWebShop.Controllers
         public IActionResult Delete(int id)
         {
             Computer computer = _computerService.FindById(id);
-            _categoryService.Remove(id);
+            _computerService.Remove(id);
 
             return RedirectToAction(nameof(Index));
         }

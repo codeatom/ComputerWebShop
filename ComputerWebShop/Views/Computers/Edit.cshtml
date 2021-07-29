@@ -34,6 +34,10 @@
     </select>
     <span asp-validation-for="@Model.CreateComputer.IsInStock"></span><br /><br />
 
+    <label asp-for="@Model.CreateComputer.ComputerSpecs" style="margin-left: 0px">ComputerSpecs</label>
+    <textarea asp-for="@Model.CreateComputer.ComputerSpecs"></textarea>
+    <span asp-validation-for="@Model.CreateComputer.ComputerSpecs"></span><br /><br />
+
     <label asp-for="@Model.CreateComputer.IsInStock" style="margin-left: 15px">IsInStock</label>
     <input asp-for="@Model.CreateComputer.IsInStock" />
     <span asp-validation-for="@Model.CreateComputer.IsInStock"></span><br />
